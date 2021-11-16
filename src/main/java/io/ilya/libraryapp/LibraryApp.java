@@ -1,13 +1,13 @@
-package io.ilya.epamjuniortask;
+package io.ilya.libraryapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EpamJuniorTaskApplication {
+public class LibraryApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(EpamJuniorTaskApplication.class, args);
+        SpringApplication.run(LibraryApp.class, args);
     }
 
 }
