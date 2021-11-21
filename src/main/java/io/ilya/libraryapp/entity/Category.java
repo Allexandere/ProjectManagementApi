@@ -20,7 +20,7 @@ public class Category {
     @Column(name = "parent_id")
     private Long parentId;
     @OneToMany(mappedBy = "parentId", cascade = CascadeType.PERSIST, orphanRemoval = true)
-    private Set<User> childCategories = new HashSet<>();
+    private Set<Category> childCategories = new HashSet<>();
 
     public Category(String title) {
         this.title = title;

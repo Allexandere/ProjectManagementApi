@@ -25,7 +25,7 @@ public class Reader {
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
     @OneToMany(mappedBy = "readerId", cascade = CascadeType.PERSIST, orphanRemoval = true)
-    private Set<User> borrowedBooks = new HashSet<>();
+    private Set<BookBorrow> borrowedBooks = new HashSet<>();
 
     public Reader(String name, String surname, String address, Date dateOfBirth) {
         this.name = name;

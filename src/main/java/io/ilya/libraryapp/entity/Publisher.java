@@ -22,7 +22,7 @@ public class Publisher {
     @OneToMany(mappedBy = "publisherId", cascade = CascadeType.PERSIST, orphanRemoval = true)
     private Set<Book> publishedBooks = new HashSet<>();
 
-    public Publisher(String name, String address, Long parentId) {
+    public Publisher(String name, String address) {
         this.name = name;
         this.address = address;
     }

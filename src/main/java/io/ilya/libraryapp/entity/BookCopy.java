@@ -11,15 +11,18 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class BookCopy {
 
-    @EmbeddedId
-    private BookCopyId id;
+    @Id
+    @GeneratedValue
+    private Long id;
+    @Column(name = "isbn")
+    private String ISBN;
     @Column
     private String position;
     @Column(name = "original_id")
     private Long originalId;
 
-    public BookCopy(BookCopyId id, String position, Long originalId) {
-        this.id = id;
+    public BookCopy(String ISBN, String position, Long originalId) {
+        this.ISBN = ISBN;
         this.position = position;
         this.originalId = originalId;
     }

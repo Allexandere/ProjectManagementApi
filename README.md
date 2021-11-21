@@ -1,1 +1,3 @@
-README : https://github.com/Allexandere/ProjectManagementApi/blob/master/README.pdf
+Как запустить?
+
+В идее, только нужно поменять соответствующие проперти

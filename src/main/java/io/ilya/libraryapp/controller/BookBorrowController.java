@@ -1,11 +1,9 @@
 package io.ilya.libraryapp.controller;
 
+import com.github.javafaker.Faker;
 import io.ilya.libraryapp.dto.BookBorrowCreationRequest;
-import io.ilya.libraryapp.dto.BookCreationRequest;
-import io.ilya.libraryapp.entity.Book;
 import io.ilya.libraryapp.entity.BookBorrow;
 import io.ilya.libraryapp.repository.BookBorrowRepository;
-import io.ilya.libraryapp.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +20,7 @@ public class BookBorrowController {
 
     @PostMapping("/create")
     public BookBorrow createBorrow(@RequestBody BookBorrowCreationRequest request) {
-        return borrowRepository.save(new BookBorrow(request.getBorrowerBookId(),
+        return borrowRepository.save(new BookBorrow(request.getBorrowedBookId(),
                 request.getReaderId(),
                 request.getExpiryDate()));
     }

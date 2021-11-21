@@ -12,7 +12,7 @@ import java.util.Set;
 @Table(name = "books")
 @Data
 @NoArgsConstructor
-public class Book {
+public class    Book {
     @Id
     @GeneratedValue
     private Long id;
@@ -34,7 +34,7 @@ public class Book {
     )
     private Set<Category> categories = new HashSet<>();
     @OneToMany(mappedBy = "originalId", cascade = CascadeType.PERSIST, orphanRemoval = true)
-    private Set<Book> publishedBooks = new HashSet<>();
+    private Set<BookCopy> copies = new HashSet<>();
 
     public Book(String title, String author, Integer year, Integer pagesAmount, Long publisherId) {
         this.title = title;

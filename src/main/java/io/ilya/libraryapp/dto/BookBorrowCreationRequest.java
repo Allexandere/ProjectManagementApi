@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookBorrowCreationRequest {
-    private Long borrowerBookId;
+    private Long borrowedBookId;
     private Long readerId;
     private Date expiryDate;
 }
